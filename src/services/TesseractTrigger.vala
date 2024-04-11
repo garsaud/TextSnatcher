@@ -79,8 +79,8 @@ class TesseractTrigger : Object {
             string text_output ;
             FileUtils.get_contents (out_path + ".txt", out text_output) ;
             if (text_output.length > 0) {
-                clipboard.set_text (text_output, text_output.length) ;
-                label.label = "Checkout Clipboard :)" ;
+                var a = new TextContentWindow (text_output);
+                label.label = "Successfully extracted" ;
             } else {
                 label.label = "Error Reading Image" ;
             }
